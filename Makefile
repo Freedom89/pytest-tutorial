@@ -39,7 +39,7 @@ testverbose:
 	pytest tests -v
 
 testscript:
-	pytest tests/eg_mock.py
+	pytest tests/eg_demo_mock.py
 
 testbyname:
 	pytest -k "rm_trailing"
