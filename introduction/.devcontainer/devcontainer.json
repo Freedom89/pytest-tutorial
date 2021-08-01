@@ -30,18 +30,15 @@
     "njpwerner.autodocstring",
     "ms-python.vscode-pylance",
     "streetsidesoftware.code-spell-checker",
-    "bastienboutonnet.vscode-dbt",
-    "innoverio.vscode-dbt-power-user",
     "bierner.markdown-mermaid",
     "foam.foam-vscode",
-    "esbenp.prettier-vscode",
     "eamodio.gitlens",
+    "esbenp.prettier-vscode",
     "yzhang.markdown-all-in-one",
     "kortina.vscode-markdown-notes",
     "tchayen.markdown-links"
   ],
   "forwardPorts": [8888, 8080],
-  "postCreateCommand": "pip install -r requirements-vscode.txt &&apt-get update && apt-get install -y curl",
   "shutdownAction": "stopContainer",
-  "containerEnv": { "PYTHONPATH": "/workspaces/pytest-tutorial" }
+  "containerEnv": { "PYTHONPATH": "/workspaces/pytest-tutorial/introduction" }
 }

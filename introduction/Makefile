@@ -6,18 +6,18 @@ dockerbuild:
 
 dockertests: dockerbuild
 	docker run --rm -it \
-	--env PYTHONPATH="${PYTHONPATH}:/workspaces/pytest-tutorial/" \
+	--env PYTHONPATH="${PYTHONPATH}:/workspaces/introduction/" \
 	docker_tests $(args)
 
 dockerbash: dockerbuild
 	docker run --rm -it -p 8888:8888 \
 	-v $(shell pwd):/tutorial \
-	--env PYTHONPATH="${PYTHONPATH}:/workspaces/pytest-tutorial/" \
+	--env PYTHONPATH="${PYTHONPATH}:/workspaces/introduction/" \
 	--entrypoint bash docker_tests
 
 dockermain: dockerbuild
 	docker run --rm -it \
-	--env PYTHONPATH="${PYTHONPATH}:/workspaces/pytest-tutorial/" \
+	--env PYTHONPATH="${PYTHONPATH}:/workspaces/introduction/" \
 	docker_tests python src/main.py
 
 c8_folder: 
