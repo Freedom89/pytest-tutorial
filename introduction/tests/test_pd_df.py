@@ -4,7 +4,7 @@ from src.pd_df import calc_features, calc_size
 
 
 @pytest.fixture
-def mock_dataframe():
+def dummy_dataframe():
     df_dummy = pd.DataFrame(
         dict(id=[1, 1, 2, 2, 3, 3, 3], values=[3, 5, 6, 7, 8, 9, 15])
     )
@@ -12,7 +12,7 @@ def mock_dataframe():
 
 
 @pytest.fixture
-def mock_results():
+def dummy_results():
     df_check = pd.DataFrame(
         {
             "id": {0: 1, 1: 2, 2: 3},
@@ -25,12 +25,11 @@ def mock_results():
     return df_check
 
 
-def test_calc_features(mock_dataframe, mock_results):
+def test_calc_features(dummy_dataframe, dummy_results):
     pd.testing.assert_frame_equal(
-        calc_features(mock_dataframe), mock_results
+        calc_features(dummy_dataframe), dummy_results
     ), "something went wrong"
 
 
-def test_calc_size(mock_dataframe):
-    assert calc_size(mock_dataframe) == 7, "something went wrong"
-
+def test_calc_size(dummy_dataframe):
+    assert calc_size(dummy_dataframe) == 7, "something went wrong"
