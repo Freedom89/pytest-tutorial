@@ -2,4 +2,9 @@ My notes/sharing based on [dataraccoon-testing!](https://www.dataraccoon.com/kno
 
 * Introduction 
 	* Introduce pytests 
-	* Related to this [dataraccoon post on testing](https://www.dataraccoon.com/knowledge/testing)
+	* [Orignial post on dataraccoon](https://www.dataraccoon.com/knowledge/testing)
+* More advance sections on pytest
+	* [Orignial post on dataraccoon](https://www.dataraccoon.com/knowledge/testing_advance)
+	* Fixtures scoping, autouse
+	* Pytest conftests - sharing fixtures across tests 
+	* Configuring tests with `pytest.ini`
